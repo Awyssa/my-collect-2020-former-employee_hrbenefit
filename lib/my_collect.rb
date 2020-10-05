@@ -3,6 +3,7 @@
 def my_collect(array)
   array.map do |lang|
     lang.upcase
+    lang.split(" ").first
   end
 end
 
