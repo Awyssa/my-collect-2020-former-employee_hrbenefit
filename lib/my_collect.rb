@@ -1,10 +1,13 @@
 
 
 def my_collect(array)
-  array.map do |lang|
-    lang.upcase
-    lang.split(" ").first
+  i = 0
+  collect = []
+  while i < array.length
+    collect << yield(array[i])
+    i+=1
   end
+  collect
 end
 
 
