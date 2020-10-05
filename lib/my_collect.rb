@@ -1,5 +1,10 @@
 
 
 def my_collect(array)
-  array.collect { |lang| lang.upcase}
+  new_array = []
+  array.collect do |lang|
+    lang.upcase
+    new_array << lang
+  end
+  return new_array
 end
